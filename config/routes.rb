@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   	end
   end
 
-  root to: 'page#home'
+  root to: 'pages#home'
 end
