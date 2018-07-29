@@ -6,7 +6,7 @@ set_positions = ->
     $(this).attr 'data-pos', i + 1
     return
   return
-    
+
 ready = ->
   set_positions()
   $('.sortable').sortable()
@@ -21,8 +21,8 @@ ready = ->
     $.ajax
       type: 'PUT'
       url: '/portfolios/sort'
-      data:order: updated_order
-    return    
+      data: order: updated_order
+    return
   return
 
- $(document).ready ready
+$(document).ready ready

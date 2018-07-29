@@ -35,9 +35,9 @@ class PortfoliosController < ApplicationController
       end
     end
   end
+  
   def edit
-
-end
+  end
 
 def update
     respond_to do |format|
@@ -63,7 +63,9 @@ def update
   def portfolio_params
     params.require(:portfolio).permit(:title, 
                                       :subtitle, 
-                                      :body, 
+                                      :body,
+                                      :main_image,
+                                      :thumb_image,
                                        technologies_attributes: [:name]
                                        )
     
