@@ -21,4 +21,10 @@ Rails.application.routes.draw do
   end
 
   root to: 'pages#home'
+
+  mount GrapeSwaggerRails::Engine, at: "/documentation"
+
+  Rails.application.routes.draw do
+    mount API::Base, at: "/"
+  end
 end
