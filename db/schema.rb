@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2018_07_10_111740) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
     t.integer "status", default: 0
+    t.string "slug"
     t.bigint "topic_id"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
